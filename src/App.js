@@ -1,12 +1,14 @@
 import React from 'react';
+import Container from "./components/Container";
+import TemperatureSwitcher from "./components/TemperatureSwitcher";
 
 function App() {
   return (
-    <div className="bg-red-700">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
-        Button
-      </button>
-    </div>
+      <Container>
+          <h1 className="text-center font-semibold text-5xl text-black">Temperature Converter</h1>
+          <p className="text-center text-gray-800 text-lg mb-16">Take home test for Peatix Front End Developer</p>
+          <TemperatureSwitcher/>
+      </Container>
   );
 }
 
