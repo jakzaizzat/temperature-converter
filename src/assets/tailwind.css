@@ -17,3 +17,29 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+.theme-light {
+    --bg-background-primary: #F5F9FC;
+    --bg-background-secondary: #f7fafc;
+    --bg-background-tertiary: #e2e8f0;
+
+    --bg-background-input: #FFFFFF;
+
+    --text-copy-primary: #212A3A;
+    --text-copy-secondary: #2F3746;
+    --text-copy-input: #C0C9D7;
+
+    --border-border-color-primary: white;
+}
+.theme-dark {
+    --bg-background-primary: #141822;
+    --bg-background-secondary: #102C44;
+    --bg-background-tertiary: #1E3951;
+
+    --bg-background-input: #212A3A;
+
+    --text-copy-primary: #FFFFFF;
+    --text-copy-secondary: #FFFFFF;
+    --text-copy-input: #566377;
+
+    --border-border-color-primary:  #1a202c;
+}

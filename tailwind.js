@@ -6,9 +6,6 @@ module.exports = {
   separator: ':',
   theme: {
     extend: {
-      screens: {
-        'dark': {'raw': 'dark-mode'}
-      }
     },
     screens: {
       sm: '640px',
@@ -22,6 +19,20 @@ module.exports = {
 
       black: '#000',
       white: '#fff',
+
+      background: {
+        primary: 'var(--bg-background-primary)',
+        secondary: 'var(--bg-background-secondary)',
+        tertiary: 'var(--bg-background-tertiary)',
+
+        input: 'var(--bg-background-input)',
+      },
+
+      copy: {
+        primary: 'var(--text-copy-primary)',
+        secondary: 'var(--text-copy-secondary)',
+        input: 'var(--text-copy-input)'
+      },
 
       gray: {
         100: '#f7fafc',
