@@ -4,7 +4,6 @@ const ThemeSwitcher = () => {
     const [isDark, setIsDark] = useState(false)
 
     useEffect(() => {
-        console.log(localStorage.getItem('isDark'))
         if(localStorage.getItem('isDark') === true) {
             setIsDark(true)
         } else {

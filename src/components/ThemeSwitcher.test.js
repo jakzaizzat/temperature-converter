@@ -5,18 +5,17 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 afterEach(cleanup);
 
-describe('Theme Switcher', function () {
+describe('Theme Switcher', () => {
 
 
     it('should render theme switcher', () => {
-        const { getByTestId, container } = render(<div id="root"><ThemeSwitcher/></div>)
+        const { getByTestId } = render(<div id="root"><ThemeSwitcher/></div>)
         expect(getByTestId('theme-toggle')).toBeTruthy();
     });
 
     it('should render light theme as a default', () => {
-        const { getByTestId, container } = render(<div id="root"><ThemeSwitcher/></div>)
+        const { container } = render(<div id="root"><ThemeSwitcher/></div>)
         const rootEl = container.querySelector('#root')
-        console.log(rootEl)
         expect(rootEl).toHaveClass('theme-light')
     })
 

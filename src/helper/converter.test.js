@@ -1,15 +1,15 @@
 import converter from "./converter";
 
-describe('coverter helper', function () {
+describe('coverter helper', () => {
     it('should able to convert celcius to farenheit', () => {
-        const celcius = 123
+        const celcius = 36
         const farenheit = converter.toFarenheit(celcius)
-        expect(farenheit).toBe(253.4)
+        expect(farenheit).toBe(96.8)
     });
 
     it('should able to convert farenheit to celcius', () => {
-        const farenheit = 100
+        const farenheit = 122
         const celcius = converter.toCelcius(farenheit)
-        expect(celcius).toBe(37.77777777777778)
+        expect(celcius).toBe(50)
     });
 });
