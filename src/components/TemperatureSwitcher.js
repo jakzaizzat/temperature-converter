@@ -16,7 +16,7 @@ const TemperatureSwitcher = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between px-4">
       <BaseInput
         name="celcius"
         placeholder="Celcius"
