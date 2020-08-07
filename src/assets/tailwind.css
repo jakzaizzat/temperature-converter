@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,37 +9,37 @@
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 .theme-light {
-    --bg-background-primary: #F5F9FC;
-    --bg-background-secondary: #f7fafc;
-    --bg-background-tertiary: #e2e8f0;
+  --bg-background-primary: #f5f9fc;
+  --bg-background-secondary: #f7fafc;
+  --bg-background-tertiary: #e2e8f0;
 
-    --bg-background-input: #FFFFFF;
+  --bg-background-input: #ffffff;
 
-    --text-copy-primary: #212A3A;
-    --text-copy-secondary: #2F3746;
-    --text-copy-input: #C0C9D7;
+  --text-copy-primary: #212a3a;
+  --text-copy-secondary: #2f3746;
+  --text-copy-input: #c0c9d7;
 
-    --border-border-color-primary: white;
+  --border-border-color-primary: white;
 }
 .theme-dark {
-    --bg-background-primary: #141822;
-    --bg-background-secondary: #102C44;
-    --bg-background-tertiary: #1E3951;
+  --bg-background-primary: #141822;
+  --bg-background-secondary: #102c44;
+  --bg-background-tertiary: #1e3951;
 
-    --bg-background-input: #212A3A;
+  --bg-background-input: #212a3a;
 
-    --text-copy-primary: #FFFFFF;
-    --text-copy-secondary: #FFFFFF;
-    --text-copy-input: #566377;
+  --text-copy-primary: #ffffff;
+  --text-copy-secondary: #ffffff;
+  --text-copy-input: #566377;
 
-    --border-border-color-primary:  #1a202c;
+  --border-border-color-primary: #1a202c;
 }
