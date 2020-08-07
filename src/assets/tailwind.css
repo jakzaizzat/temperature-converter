@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset input number */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.theme-light {
+  --bg-background-primary: #f5f9fc;
+  --bg-background-secondary: #f7fafc;
+  --bg-background-tertiary: #e2e8f0;
+
+  --bg-background-input: #ffffff;
+
+  --text-copy-primary: #212a3a;
+  --text-copy-secondary: #2f3746;
+  --text-copy-input: #c0c9d7;
+
+  --border-border-color-primary: white;
+}
+.theme-dark {
+  --bg-background-primary: #141822;
+  --bg-background-secondary: #102c44;
+  --bg-background-tertiary: #1e3951;
+
+  --bg-background-input: #212a3a;
+
+  --text-copy-primary: #ffffff;
+  --text-copy-secondary: #ffffff;
+  --text-copy-input: #566377;
+
+  --border-border-color-primary: #1a202c;
+}
