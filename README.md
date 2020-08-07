@@ -1,68 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Setting up development environment 🛠
 
-### `yarn start`
+1. Clone this repo or download the zip folder. 
+2. Run the `npm install` to install all the dependency. 
+3. Run `npm start` in the root folder to start the application
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Script to run
+```
+npm run start       -   To run the application in port 3000
+npm run build       -   To build for production usage
+npm run test   	  -   Run unit test cases
+npm run cypress     -   Run e2e test using cypress
+```
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Planning
 
-### `yarn build`
+Based on the instruction, there are two objectives need to be done. First one is temperature converter and theme toggle. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+First thing, I do a quick design in Figma on how the UI will looks alike - [Figma](https://www.figma.com/file/qnR3IWFeMAUlqrpikS7Yzl/Peatix?node-id=0%3A1). To reduce the amount of iteration during development process. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `yarn eject`
+### Tech Stack
+* React for JS Framework
+* TailwindCSS for CSS
+* Jest for Unit testing
+* Cypress for end-to-end testing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Frontend Architecture
+Im decide to use *React* for the Frontend framework because its easier for me to get started. Since, Peatix’s currently searching for someone with React experience then it’s a good idea for me to show my skill. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The idea will be building a single page application. The structure gonna be so simple. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I create one page/container component with multiples components that comes together. The reason to split the UI into component based because its easier to build and to test it. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### CSS
+Im using *tailwindCSS* for the CSS framework. Its a utility library. Its easier for me to build the UI with it since you don’t need to deal with custom CSS files. Furthermore, their colour scheme looks good too. 
 
-## Learn More
+#### Unit testing
+*Jest* will be my go-to framework for the unit testing. Component without testing doesn’t convince me that its gonna work. So, I wrote several test cases to make sure the component is robust enough before push it to production. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### End-to-end testing
+Unit testing is good to test the code/abstract level but we need to find a way to test or simulate the user behaviour too. That’s where the end-to-end comes in. I’m using *Cypress* to automate all the user behavious. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. The user will enter a celcius value and get the Farenheit.
+2. The user will enter a Farenheit value and get the Celcius.
+3. The user will toggle the theme button and the colour scheme will changed. 
 
-### Code Splitting
+#### Deployment
+I’m using vercel to deploy the UI. It’s automatically deploy whenever I pushed a new changes in the github. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Features
 
-### Analyzing the Bundle Size
+### Temperature Converter
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Im going to add two input field for celcius and farenheit. The idea is to let the user get instant result after entering the value. We don’t need the submit button.  
 
-### Making a Progressive Web App
+### Theme Switcher
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Im added a toggle button at the top right. To make it more standout, I use different icon for each theme which are sun icon for light theme and moon icon for dark theme. 
 
-### Advanced Configuration
+As we know, light theme comes with more light dominant colour so the colour scheme I choose need to be well blended and easy for user to read. Same thing goes to dark theme. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Im using a colour pallete website - [Coolors - The super fast color schemes generator!](https://coolors.co/) to comes up with the colour scheme then I’m playing around with the hue to make sure its blend together. 
 
-### Deployment
+To implement this, I’m gonna use CSS variable to make the colour will be dynamic. It’s gonna be like this. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```css
+.theme-light {
+    --bg-background-primary: #F5F9FC;
+}
+.theme-dark {
+    --bg-background-primary: #141822;
+}
+```
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+We gonna detect whether the theme is dark or light by using a specific class `theme-light` or `theme-dark` in the body of the DOM. 
