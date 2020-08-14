@@ -9,7 +9,7 @@ function App() {
         Temperature Converter
       </h1>
       <p className="text-center text-copy-secondary text-lg mb-16">
-        Take home test for Peatix Front End Developer
+        Simple React Application
       </p>
       <TemperatureSwitcher />
     </Container>
