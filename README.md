@@ -1,5 +1,4 @@
 # Temperature converter application
-Take-home test for Peatix Front End Developer.
 
 [Live URL](https://temperature-converter-peatix.vercel.app/)
 [Github URL](https://github.com/jakzaizzat/temperature-converter)
